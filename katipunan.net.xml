@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-09-20T18:21:20.776498+08:00 by Eclipse SUMO netedit 1.27.1
+<!-- generated on 2026-09-20T19:36:33.734504+08:00 by Eclipse SUMO netedit 1.27.1
 <neteditConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
@@ -133,10 +133,10 @@
     </edge>
 
     <tlLogic id="J16" type="static" programID="0" offset="0">
-        <phase duration="20" state="GrrrGr"/>
-        <phase duration="20" state="rrrGrG"/>
-        <phase duration="20" state="rrGGrr"/>
-        <phase duration="20" state="GGrrrr"/>
+        <phase duration="20" state="GGGrrrrrrrrGGGGrrrrrr"/>
+        <phase duration="20" state="rrrrrrrrrGGrrrrGGGGGG"/>
+        <phase duration="20" state="rrrrrrrGGGGrrrrrrrrrr"/>
+        <phase duration="20" state="GGGGGGGrrrrrrrrrrrrrr"/>
     </tlLogic>
 
     <junction id="J0" type="dead_end" x="92.27" y="14.19" incLanes="E0_0 E0_1" intLanes="" shape="91.97,7.80 92.27,14.19"/>
@@ -172,27 +172,27 @@
     <junction id="J4" type="dead_end" x="99.28" y="4.70" incLanes="E16_0 E16_1 E16_2" intLanes="" shape="100.84,-4.77 99.28,4.70"/>
     <junction id="J6" type="dead_end" x="-17.26" y="-101.52" incLanes="E20_0 E20_1 E20_2 E20_3 E20_4" intLanes="" shape="-33.24,-100.69 -17.26,-101.52"/>
 
-    <connection from="E1" to="E20" fromLane="0" toLane="1" via=":J16_7_0" tl="J16" linkIndex="2" dir="L" state="o"/>
-    <connection from="E1" to="E20" fromLane="1" toLane="2" via=":J16_7_1" tl="J16" linkIndex="2" dir="L" state="o"/>
-    <connection from="E15" to="E16" fromLane="0" toLane="0" via=":J16_11_0" tl="J16" linkIndex="4" dir="r" state="O"/>
-    <connection from="E15" to="E0" fromLane="0" toLane="0" via=":J16_12_0" tl="J16" linkIndex="4" dir="R" state="O"/>
-    <connection from="E15" to="E19" fromLane="1" toLane="1" via=":J16_13_0" tl="J16" linkIndex="4" dir="s" state="O"/>
-    <connection from="E15" to="E19" fromLane="2" toLane="2" via=":J16_13_1" tl="J16" linkIndex="4" dir="s" state="O"/>
-    <connection from="E17" to="E20" fromLane="0" toLane="0" via=":J16_15_0" tl="J16" linkIndex="5" dir="r" state="o"/>
-    <connection from="E17" to="E16" fromLane="1" toLane="1" via=":J16_16_0" tl="J16" linkIndex="5" dir="s" state="o"/>
-    <connection from="E17" to="E0" fromLane="1" toLane="0" via=":J16_17_0" tl="J16" linkIndex="5" dir="s" state="o"/>
-    <connection from="E17" to="E16" fromLane="2" toLane="2" via=":J16_18_0" tl="J16" linkIndex="5" dir="s" state="o"/>
-    <connection from="E17" to="E0" fromLane="2" toLane="1" via=":J16_19_0" tl="J16" linkIndex="5" dir="s" state="o"/>
-    <connection from="E17" to="E19" fromLane="2" toLane="2" via=":J16_20_0" tl="J16" linkIndex="5" dir="l" state="o"/>
+    <connection from="E1" to="E20" fromLane="0" toLane="1" via=":J16_7_0" tl="J16" linkIndex="7" dir="L" state="o"/>
+    <connection from="E1" to="E20" fromLane="1" toLane="2" via=":J16_7_1" tl="J16" linkIndex="8" dir="L" state="o"/>
+    <connection from="E15" to="E16" fromLane="0" toLane="0" via=":J16_11_0" tl="J16" linkIndex="11" dir="r" state="O"/>
+    <connection from="E15" to="E0" fromLane="0" toLane="0" via=":J16_12_0" tl="J16" linkIndex="12" dir="R" state="O"/>
+    <connection from="E15" to="E19" fromLane="1" toLane="1" via=":J16_13_0" tl="J16" linkIndex="13" dir="s" state="O"/>
+    <connection from="E15" to="E19" fromLane="2" toLane="2" via=":J16_13_1" tl="J16" linkIndex="14" dir="s" state="O"/>
+    <connection from="E17" to="E20" fromLane="0" toLane="0" via=":J16_15_0" tl="J16" linkIndex="15" dir="r" state="o"/>
+    <connection from="E17" to="E16" fromLane="1" toLane="1" via=":J16_16_0" tl="J16" linkIndex="16" dir="s" state="o"/>
+    <connection from="E17" to="E0" fromLane="1" toLane="0" via=":J16_17_0" tl="J16" linkIndex="17" dir="s" state="o"/>
+    <connection from="E17" to="E16" fromLane="2" toLane="2" via=":J16_18_0" tl="J16" linkIndex="18" dir="s" state="o"/>
+    <connection from="E17" to="E0" fromLane="2" toLane="1" via=":J16_19_0" tl="J16" linkIndex="19" dir="s" state="o"/>
+    <connection from="E17" to="E19" fromLane="2" toLane="2" via=":J16_20_0" tl="J16" linkIndex="20" dir="l" state="o"/>
     <connection from="E18" to="E20" fromLane="0" toLane="0" via=":J16_0_0" tl="J16" linkIndex="0" dir="s" state="O"/>
-    <connection from="E18" to="E20" fromLane="1" toLane="1" via=":J16_0_1" tl="J16" linkIndex="0" dir="s" state="O"/>
-    <connection from="E18" to="E20" fromLane="2" toLane="2" via=":J16_0_2" tl="J16" linkIndex="0" dir="s" state="O"/>
-    <connection from="E18" to="E16" fromLane="3" toLane="1" via=":J16_3_0" tl="J16" linkIndex="1" dir="l" state="o"/>
-    <connection from="E18" to="E0" fromLane="3" toLane="0" via=":J16_4_0" tl="J16" linkIndex="1" dir="l" state="o"/>
-    <connection from="E18" to="E16" fromLane="4" toLane="2" via=":J16_5_0" tl="J16" linkIndex="1" dir="l" state="o"/>
-    <connection from="E18" to="E0" fromLane="4" toLane="1" via=":J16_6_0" tl="J16" linkIndex="1" dir="l" state="o"/>
-    <connection from="E2" to="E20" fromLane="0" toLane="3" via=":J16_9_0" tl="J16" linkIndex="3" dir="l" state="o"/>
-    <connection from="E2" to="E20" fromLane="1" toLane="4" via=":J16_9_1" tl="J16" linkIndex="3" dir="l" state="o"/>
+    <connection from="E18" to="E20" fromLane="1" toLane="1" via=":J16_0_1" tl="J16" linkIndex="1" dir="s" state="O"/>
+    <connection from="E18" to="E20" fromLane="2" toLane="2" via=":J16_0_2" tl="J16" linkIndex="2" dir="s" state="O"/>
+    <connection from="E18" to="E16" fromLane="3" toLane="1" via=":J16_3_0" tl="J16" linkIndex="3" dir="l" state="o"/>
+    <connection from="E18" to="E0" fromLane="3" toLane="0" via=":J16_4_0" tl="J16" linkIndex="4" dir="l" state="o"/>
+    <connection from="E18" to="E16" fromLane="4" toLane="2" via=":J16_5_0" tl="J16" linkIndex="5" dir="l" state="o"/>
+    <connection from="E18" to="E0" fromLane="4" toLane="1" via=":J16_6_0" tl="J16" linkIndex="6" dir="l" state="o"/>
+    <connection from="E2" to="E20" fromLane="0" toLane="3" via=":J16_9_0" tl="J16" linkIndex="9" dir="l" state="o"/>
+    <connection from="E2" to="E20" fromLane="1" toLane="4" via=":J16_9_1" tl="J16" linkIndex="10" dir="l" state="o"/>
 
     <connection from=":J16_0" to="E20" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":J16_0" to="E20" fromLane="1" toLane="1" dir="s" state="M"/>
