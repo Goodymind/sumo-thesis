@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-09-21T14:40:34.017434+08:00 by Eclipse SUMO netedit 1.27.1
+<!-- generated on 2026-09-21T15:02:30.394732+08:00 by Eclipse SUMO netedit 1.27.1
 -->
 
 <neteditConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
-        <sumocfg-file value="katipunan.sumocfg"/>
-        <route-files value="katipunan.rou.xml"/>
+        <sumocfg-file value="katipunan-distributed-route.sumocfg"/>
+        <route-files value="katipunan-route-distribution.rou.xml"/>
         <sumo-net-file value="katipunan.net.xml"/>
     </input>
 
