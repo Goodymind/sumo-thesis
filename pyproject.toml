@@ -7,7 +7,11 @@ authors = [
     { name = "Cheska Huang", email = "julyannahuang@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "jupyterlab>=4.6.4",
+    "matplotlib>=3.11.2",
+    "pygad>=3.7.0",
+]
 
 [project.scripts]
 sumo-thesis = "sumo_thesis:main"
