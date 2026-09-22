@@ -63,8 +63,11 @@ def simulate():
 
     tree = ET.parse(STATISTICS_OUTPUT)
     vts = tree.getroot().find('vehicleTripStatistics')
-    print(f"total_vehicles: {vts.get('count')}")
-    print(f"average_waiting_time: {vts.get('waitingTime')} s")
+    count = int(vts.get('count'))
+    avg_wait = float(vts.get('waitingTime'))
+    # print(f"total_vehicles: {vts.get('count')}")
+    # print(f"average_waiting_time: {vts.get('waitingTime')} s")
+    return count, avg_wait
 
 if __name__ == "__main__":
     high_demand_flows = {
@@ -89,39 +92,14 @@ if __name__ == "__main__":
         "SR-vehicle": 200,
     }
 
-
-    set_phase_durations(TLS_FILE, TLS_PROGRAM_ID, [31, 32, 33, 34]) 
-    set_flow_perhour(ROUTE_FILE, high_demand_flows)
-    print("High Demand Flows with Phase Durations [31, 32, 33, 34]")
-    simulate()
-    set_flow_perhour(ROUTE_FILE, medium_demand_flows)
-    print("Medium Demand Flows with Phase Durations [31, 32, 33, 34]")
-    simulate()
-    set_flow_perhour(ROUTE_FILE, low_demand_flows)
-    print("Low Demand Flows with Phase Durations [31, 32, 33, 34]")
-    simulate()
-
-    set_phase_durations(TLS_FILE, TLS_PROGRAM_ID, [41, 42, 43, 44])  
-    set_flow_perhour(ROUTE_FILE, high_demand_flows)
-    print("High Demand Flows with Phase Durations [41, 42, 43, 44]")
-    simulate()
-    set_flow_perhour(ROUTE_FILE, medium_demand_flows)
-    print("Medium Demand Flows with Phase Durations [41, 42, 43, 44]")
-    simulate()
-    set_flow_perhour(ROUTE_FILE, low_demand_flows)
-    print("Low Demand Flows with Phase Durations [41, 42, 43, 44]")
-    simulate()
-
-    set_phase_durations(TLS_FILE, TLS_PROGRAM_ID, [51, 52, 53, 54])  
-    set_flow_perhour(ROUTE_FILE, high_demand_flows)
-    print("High Demand Flows with Phase Durations [51, 52, 53, 54]")
-    simulate()
-    set_flow_perhour(ROUTE_FILE, medium_demand_flows)
-    print("Medium Demand Flows with Phase Durations [51, 52, 53, 54]")
-    simulate()
-    set_flow_perhour(ROUTE_FILE, low_demand_flows)
-    print("Low Demand Flows with Phase Durations [51, 52, 53, 54]")
-    simulate()
+results = []
+for durations in ([31, 32, 33, 34], [41, 42, 43, 44], [51, 52, 53, 54]):
+    set_phase_durations(TLS_FILE, TLS_PROGRAM_ID, durations)
+    for label, flows in [("High", high_demand_flows), ("Medium", medium_demand_flows), ("Low", low_demand_flows)]:
+        set_flow_perhour(ROUTE_FILE, flows)
+        count, avg_wait = simulate()
+        results.append({"durations": durations, "demand": label, "count": count, "avg_wait": avg_wait})
+        print(f"{label} demand, phases {durations}: count={count}, avg_wait={avg_wait:.2f}s")
 
     set_phase_durations(TLS_FILE, TLS_PROGRAM_ID, [20, 20, 20, 20])  # Reset to original durations
     set_flow_perhour(ROUTE_FILE, high_demand_flows)  # Reset to original flows
