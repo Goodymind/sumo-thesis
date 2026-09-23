@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <tlLogic id="J16" type="static" programID="1" offset="0">
+        <phase duration="76.7618962884895" state="GGGrrrrrrrrGGGGrrrrrr" />
+        <phase duration="68.17391420986705" state="rrrrrrrrrGGrrrrGGGGGG" />
+        <phase duration="8.049114204324098" state="rrrrrrrGGGGrrrrrrrrrr" />
+        <phase duration="74.23874557753591" state="GGGGGGGrrrrrrrrrrrrrr" />
+    </tlLogic>
+</additional>
