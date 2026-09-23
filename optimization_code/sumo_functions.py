@@ -56,7 +56,8 @@ def score_traffic_light_pattern(
         "--statistic-output", STATISTICS_OUTPUT,
         "--step-length", "1.0", 
         "--start",
-        "--quit-on-end"
+        "--quit-on-end",
+        "--no-warnings"
     ]
 
     try:
