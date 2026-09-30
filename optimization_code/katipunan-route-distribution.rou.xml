@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    
+    <route id="FDR-G1" edges="E17 E0" color="magenta" />
+    <route id="FDR-KNO" edges="E17 E19" color="magenta" />
+    <route id="FDR-KSO" edges="E17 E20" color="magenta" />
+    <route id="FDR-UR" edges="E17 E16" color="magenta" />
+    <route id="G2-KSO" edges="E1 E20" color="0,128,0" />
+    <route id="KNI-G1" edges="E15 E0" color="yellow" />
+    <route id="KNI-KNO" edges="E15 E19" color="yellow" />
+    <route id="KNI-UR" edges="E15 E16" color="yellow" />
+    <route id="SR-KSO" edges="E2 E20" color="red" />
+    <route id="ksi-g1" edges="E18 E0" color="blue" />
+    <route id="ksi-kso" edges="E18 E20" color="blue" />
+    <route id="ksi-ur" edges="E18 E16" color="blue" />
+    <routeDistribution id="fdr">
+        <route refId="FDR-G1" />
+        <route refId="FDR-KNO" />
+        <route refId="FDR-KSO" />
+        <route refId="FDR-UR" />
+    </routeDistribution>
+    <routeDistribution id="kni">
+        <route refId="KNI-G1" />
+        <route refId="KNI-KNO" />
+        <route refId="KNI-UR" />
+    </routeDistribution>
+    <routeDistribution id="ksi">
+        <route refId="ksi-kso" />
+        <route refId="ksi-ur" probability="0.30" />
+        <route refId="ksi-g1" probability="0.30" />
+    </routeDistribution>
+    
+    <flow id="FDR-vehicle" begin="0.00" end="3600.00" perHour="500" color="cyan" route="fdr" />
+    <flow id="G2-vehicle" begin="0.00" end="3600.00" perHour="800" color="green" route="G2-KSO" />
+    <flow id="KNI-vehicle" begin="0.00" end="3600.00" perHour="2000" color="red" route="kni" />
+    <flow id="KSI-vehicle" begin="0.00" end="3600.00" perHour="2000" route="ksi" />
+    <flow id="SR-vehicle" begin="0.00" end="3600.00" perHour="400" color="blue" route="SR-KSO" />
+</routes>
