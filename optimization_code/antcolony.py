@@ -1,4 +1,5 @@
 import random
+
 import numpy as np
 
 # Based on: https://www.geeksforgeeks.org/machine-learning/introduction-to-ant-colony-optimization/
@@ -10,11 +11,11 @@ Q = 100
 n_ants = 10
 n_iterations = 5
 
-min_duration = 1
-max_duration = 10
+min_duration = 0
+max_duration = 90
 
 # traffic light policy (a point in the graph that ants can go to)
-type TrafficLightPolicy = tuple[int, int, int]
+type TrafficLightPolicy = tuple[int, int, int, int]
 
 
 def is_valid_step(tlp1: TrafficLightPolicy, tlp2: TrafficLightPolicy):
@@ -101,7 +102,7 @@ def aco():
 
             print(f"Ant {ant} done")
 
-        for node in pheromone_graph.keys():
+        for node in pheromone_graph:
             pheromone_graph[node] *= 1 - evaporation  # evaporate some pheromone
 
         for path, score in zip(all_paths, all_scores):
